@@ -1,0 +1,28 @@
+class Car {
+  constructor(brand, model, year) {
+    this.brand = brand;
+    this.model = model;
+    this.year = year;
+  }
+
+  displayInformation() {
+    console.log(`Brand: ${this.brand}, Model: ${this.model}, Year: ${this.year}`);
+  }
+}
+
+let numberOfCars = parseInt(prompt("How many cars do you want to add?"));
+const cars = [];
+
+for (let i = 0; i < numberOfCars; i++) {
+  alert(`Enter car ${i + 1} information`);
+
+  let brand = prompt("Brand:");
+  let model = prompt("Model:");
+  let year = prompt("Year:");
+
+  cars.push(new Car(brand, model, year));
+}
+
+cars.forEach((car) => {
+  car.displayInformation();
+});
